@@ -1,0 +1,42 @@
+<div class="col col-lg-8 tables">
+  <div id="wholetable" class="m-0 card card-body table-india">
+    <div id="table-title">
+      <p style="font-size: 1.4rem; color: #dddddd; font-weight: bold; text-align: center;">
+        INDIA statewise stats <br />
+        <span style="font-size: 0.8rem; color: yellow;">(click the name to get more specific details)</span>
+      </p>
+    </div>
+    <div class="search-box" style="
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+        
+      ">
+      <input id="table-input" type="text" placeholder="Search......"
+        style="border: 0; color: white; background-color: #1b2035; width: 100%;" />
+    </div>
+    <div class="tableFixHead">
+      <table class="table text-center" style="border: 0;">
+        <thead>
+          <tr style="border: 0;">
+            <th style="border: 0;">NAME</th>
+            <th style="border: 0; color: rgb(248, 245, 64);">ACTIVE</th>
+            <th style="border: 0; color: rgb(101, 221, 155);">RECOVERED</th>
+            <th style="border: 0; color: #f65164;">DECEASED</th>
+            <th style="border: 0; color: rgb(68, 155, 226);">CONFIRMED</th>
+          </tr>
+        </thead>
+        <tbody id="indiatbody">
+          <!--{% for col in main %}
+          <tr style="border: 0;">
+            {% for row in col %}
+            <td style="border: 0;"><div style="color: white;">{{row}}</div></td>
+            {% endfor %}
+          </tr>
+          {% endfor %}-->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

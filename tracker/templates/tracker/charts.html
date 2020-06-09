@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nCov19india.in</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'tracker/main.css' %}">
+  <style>
+    body {
+      z-index: -1;
+      background-color: #161e2c;
+    }
+
+    nav {
+      z-index: 1;
+    }
+
+    .card {
+      background: #161e2c;
+      box-shadow: 5px 5px 8px #0d1119, -5px -5px 8px #1f2b3f;
+    }
+
+    #chart {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .navbar .navbar-brand a {
+      font-size: 30px;
+    }
+
+    #navbarNav ul li {
+      margin-left: 10px;
+    }
+
+    #navbarNav ul li a {
+      font-size: 25px;
+    }
+  </style>
+
+</head>
+
+<body>
+  {% include 'tracker/navbar.html' %}
+  <div style="margin-top: 30px;"></div>
+
+  <div class="row my-3">
+    <div class="col" style="margin-top:60px;">
+      <h4 style="text-align:center; color: #dfdfef; font-size: 40px;">IN-DEPTH ANALYSIS</h4>
+
+    </div>
+  </div>
+  <div class="row my-2">
+    <div class="col-md-1"></div>
+    <div id="first-graph" class="col-sm-8 col-md-10">
+      <div class="card">
+        <div class="card-body">
+          <div class="chart-title" style="
+                color: #6c757d;
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                ">
+            TOTAL DAILY CASES
+          </div>
+          <div style="font-size: 0.7rem; color: yellow; text-align: center;">
+            (click below to see variations)
+          </div>
+          <div class="chart-container"
+            style="position: relative; height:40vh; display: flex; flex-direction: row; justify-content: center;">
+            <canvas id="total-chart" width="600" height="250"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+
+  </div>
+
+  <div class="row py-2">
+    <div class="col-md-2"></div>
+    <div class="col-sm-12 col-md-8 py-1">
+      <div class="card">
+        <div class="card-body">
+          <div class="chart-title" style="
+                color: #6c757d;
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                ">
+            Top 5 State's Active Cases
+          </div>
+          <hr>
+          <canvas id="chDonut1"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+
+  </div>
+  <div class="row py-2">
+    <div class="col-md-2"></div>
+    <div class="col-sm-12 col-md-8 py-1">
+      <div class="card">
+        <div class="card-body">
+          <div class="chart-title" style="
+                    color: #6c757d;
+                    text-align: center;
+                   font-size: 30px;
+                    font-weight: bold;
+                  ">
+            Top 5 State's Recovered Cases
+          </div>
+          <hr>
+          <canvas id="chDonut2"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+
+  </div>
+  <div class="row py-2">
+    <div class="col-md-2"></div>
+    <div class="col-sm-12 col-md-8 py-1">
+      <div class="card">
+        <div class="card-body">
+          <div class="chart-title" style="
+                    color: #6c757d;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: bold;
+                    ">
+            Top 5 State's Deceased
+          </div>
+          <hr>
+          <canvas id="chDonut3"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+
+  </div>
+
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="{% static 'js/totalcasech.js' %}"></script>
+<script src="{% static 'js/dailycasech.js' %}"></script>
+<script src="{% static 'js/top5active.js' %}"></script>
+<script>
+  $(document).ready(function () {
+    $('#chart').delay(100).fadeIn(300);
+  });
+
+
+</script>
+
+</html>

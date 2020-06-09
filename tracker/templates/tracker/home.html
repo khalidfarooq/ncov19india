@@ -1,0 +1,12 @@
+{% extends 'tracker/main.html'%}
+{% block content %}
+<div class="container-fluid content">
+  <div class="row " style="display:none;">
+    {% include 'tracker/statsindia.html' %}
+    <div style="margin-top: 10px;"></div>
+    {% include 'tracker/tableindia.html' %}
+
+  </div>
+</div>
+
+{% endblock %}

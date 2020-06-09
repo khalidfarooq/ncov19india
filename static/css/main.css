@@ -1,0 +1,250 @@
+/*----------------Glocbal Declr-----------------*/
+
+body {
+  z-index: -1;
+  background-color: #161e2c;
+}
+p {
+  color: #dfdfef;
+}
+h2 {
+  text-align: center;
+}
+nav {
+  z-index: 1;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+.content {
+  margin-top: 100px;
+}
+
+input{
+  width: 100%;
+}
+
+input[type="text"]::placeholder {                 
+  /* Firefox, Chrome, Opera */ 
+  text-align: center; 
+} 
+input[type="text"]:-ms-input-placeholder { 
+  /* Internet Explorer 10-11 */ 
+  text-align: center; 
+} 
+input[type="ematextil"]::-ms-input-placeholder {  
+    
+  /* Microsoft Edge */ 
+  text-align: center; 
+}       
+
+div::-webkit-scrollbar {
+  height: 7px;
+}
+div::-webkit-scrollbar-track {
+  border-radius: 10px;
+
+  webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+div::-webkit-scrollbar-thumb {
+  background-color: a6c53b;
+
+  webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.container-fluid .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+/*-------x---------Glocbal Declr--------x---------*/
+
+/*-----------------Navbar--------------------------*/
+.navbar .navbar-brand a{
+  font-size: 30px;
+}
+
+#navbarNav ul li{
+  margin-left: 10px;
+}
+#navbarNav ul li a{
+  font-size: 25px;
+}
+.card {
+  border-radius: 15px;
+  background: #161e2c;
+  box-shadow: 5px 5px 8px #0d1119, -5px -5px 8px #1f2b3f;
+}
+.navbar-toggler{
+  background-color: rgb(26, 23, 23);
+}
+/*-------x---------Navbar---------------x----------*/
+
+
+/*-----------------Table----------------------------*/
+.content .row .tables .card-body table {
+  z-index: 1;
+}
+thead {
+  color: white;
+  font-size: 1.1em;
+}
+.table tr:nth-child(even) {
+  background: #252d4d;
+}
+.table-india {
+  border-radius: 15px;
+}
+
+.tableFixHead {
+  overflow-y: auto;
+  overflow-x: auto;
+  height:758px;
+}
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+  background-color: #1b2035;
+}
+
+/*-------x---------Table----------------x-----------*/
+
+/*-----------------stats----------------------------*/
+.stats-overall-india {
+  background-color: #161e2c;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+
+/*-------x---------stats----------------x-----------*/
+
+
+
+
+
+@media screen and (min-width: 992px) {
+  #wholetable{
+    width: 113%;
+  }
+  .container-fluid .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .container-fluid .row .col {
+    padding-bottom: 15px;
+  }
+  .tableFixHead {
+    overflow-y: auto;
+    height: 700px;
+  }
+  .tableFixHead .table thead {
+    font-size: 20px;
+  }
+  .tableFixHead .table tbody tr a {
+    font-size: 20px;
+  }
+  .tableFixHead .table tbody tr  {
+    font-size: 20px;
+  }
+  nav {
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 991px) {
+  #mhrow .tables{
+  margin-top: 10px;
+}
+  .tableFixHead .table thead {
+    font-size: 17px;
+  }
+  .tableFixHead .table tbody tr a {
+    font-size: 20px;
+  }
+  .tableFixHead .table tbody tr  {
+    font-size: 20px;
+  }
+  nav {
+    z-index: 1;
+  }
+  .navbar h3 a{
+    font-size: 2rem;
+  }
+  .container-fluid .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 100px) and (max-width:700px) {
+  #mhrow .tables{
+  margin-top: 10px;
+}
+  
+  .tableFixHead{
+    height: 500px;
+  }
+  .tableFixHead .table thead {
+    font-size: 10px;
+  }
+  .tableFixHead .table tbody tr a{
+    font-size: 15px;
+  }
+  .tableFixHead .table > tbody tr  {
+    font-size: 16px;
+  } 
+  nav {
+    z-index: 1;
+  }
+  
+  .container-fluid .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#indiatbody tr td,
+#mhtbody tr td,
+#tntbody tr td,
+#dltbody tr td ,
+#gjtbody tr td ,
+#rjtbody tr td ,
+#mptbody tr td ,
+#uptbody tr td ,
+#wbtbody tr td ,
+#brtbody tr td ,
+#aptbody tr td ,
+#katbody tr td ,
+
+#tgtbody tr td ,
+#jktbody tr td ,
+#hrtbody tr td ,
+#pbtbody tr td ,
+#ortbody tr td ,
+#astbody tr td ,
+#kltbody tr td ,
+#uttbody tr td ,
+#jhtbody tr td ,
+#cttbody tr td ,
+#hptbody tr td ,
+#trtbody tr td ,
+#chtbody tr td ,
+#mntbody tr td ,
+#latbody tr td ,
+#gatbody tr td ,
+#pytbody tr td ,
+#nltbody tr td ,
+#antbody tr td ,
+#mltbody tr td ,
+#artbody tr td ,
+#dntbody tr td ,
+#mztbody tr td ,
+#sktbody tr td ,
+#ldtbody tr td   {
+  color: rgb(235, 225, 225);
+  border: 0;
+  font-weight: bold;
+
+}
+

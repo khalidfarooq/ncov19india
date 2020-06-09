@@ -1,0 +1,127 @@
+{% extends 'tracker/main.html'%} {% load static %} {% block content %}
+<div class="container-fluid content">
+  <div class="row" id="mhrow" style="display: none;">
+    <div class="col col-lg-3">
+      <div class="container--wrap bg-navy-4">
+        <div class="card card-body stats-overall-india">
+          <p style="
+              color: #dfdfef;
+              text-align: center;
+              font-size: 1.4rem;
+              font-weight: bold;
+            ">
+            Jharkhand STATS
+          </p>
+          <hr />
+
+          <p id="jhconfirmed" style="
+              color: rgb(68, 155, 226);
+              font-weight: bold;
+              text-align: center;
+              border-bottom: 0;
+              font-size: 50px;
+              margin-bottom: 0px;
+            "></p>
+          <p style="
+              color: #dfdfef;
+              font-size: 18px;
+              font-weight: bold;
+              border-bottom: 0;
+              text-align: center;
+            ">
+            Total Confirmed
+          </p>
+
+          <p id="jhdeaths" style="
+              color: #f65164;
+              font-weight: bold;
+              text-align: center;
+              border-bottom: 0;
+              font-size: 50px;
+              margin-bottom: 0px;
+            "></p>
+          <p style="
+              color: #dfdfef;
+              font-size: 18px;
+              font-weight: bold;
+              border-bottom: 0;
+              text-align: center;
+            ">
+            Total Deceased
+          </p>
+          <p id="jhactive" style="
+              color: rgb(248, 245, 64);
+              font-weight: bold;
+              text-align: center;
+              border-bottom: 0;
+              font-size: 50px;
+              margin-bottom: 0px;
+            "></p>
+          <p style="
+              color: #dfdfef;
+              font-size: 18px;
+              font-weight: bold;
+              border-bottom: 0;
+              text-align: center;
+            ">
+            Total Active
+          </p>
+          <p id="jhrecovered" style="
+              color: rgb(101, 221, 155);
+              font-weight: bold;
+              text-align: center;
+              border-bottom: 0;
+              font-size: 50px;
+              margin-bottom: 0px;
+            "></p>
+          <p style="
+              color: #dfdfef;
+              font-size: 18px;
+              font-weight: bold;
+              border-bottom: 0;
+              text-align: center;
+            ">
+            Total Recovered
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-lg-8 tables">
+      <div id="wholetable" class="m-0 card card-body table-india">
+        <div id="table-title">
+          <p style="font-size: 1.4rem; color: #dddddd; font-weight: bold; text-align: center;">
+            Jharkhand districtwise stats <br />
+          </p>
+        </div>
+        <div class="search-box" style="
+      							        display: flex;
+      							        flex-direction: row;
+      							        justify-content: center;
+      							        margin-bottom: 10px;
+      							        
+      							      ">
+          <input id="table-input" type="text" placeholder="Search......"
+            style="border: 0; color: white; background-color: #1b2035; width: 100%;" />
+        </div>
+        <div class="tableFixHead">
+          <table class="table text-center" style="border: 0;">
+            <thead>
+              <tr style="border: 0;">
+                <th style="border: 0;">NAME</th>
+                <th style="border: 0; color: rgb(248, 245, 64);">ACTIVE</th>
+                <th style="border: 0; color: rgb(101, 221, 155);">RECOVERED</th>
+                <th style="border: 0; color: #f65164;">DECEASED</th>
+                <th style="border: 0; color: rgb(68, 155, 226);">CONFIRMED</th>
+              </tr>
+            </thead>
+            <tbody id="jhtbody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

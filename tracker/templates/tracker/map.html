@@ -1,0 +1,141 @@
+{% extends 'tracker/main.html'%} {% include 'tracker/navbar.html' %}
+{% block content %}
+<div style="margin-top: 100px;"></div>
+<div class="container-fluid content p-0" style="margin-top: 60px;">
+  <div id="map" class="jvmap-smart" style="height: calc(100vh - 60px);"></div>
+</div>
+
+<script>
+  var dict = {};
+  dict['name'] = 'khalid';
+  dict['age'] = '98';
+  console.log(dict)
+  var url = "http://api.covid19india.org/data.json";
+  var conf = {};
+  var deat = {};
+  var act = {};
+  var rec = {};
+  var confirm = []
+  var active = []
+  var deaths = []
+  var recovered = []
+  $.getJSON(url, function (data) {
+
+    var code = [
+      "IN-MH",
+      "IN-TN",
+      "IN-DL",
+      "IN-GJ",
+      "IN-RJ",
+      "IN-UP",
+      "IN-MP",
+      "IN-UN",
+      "IN-WB",
+      "IN-KA",
+      "IN-BR",
+      "IN-AP",
+      "IN-HR",
+      "IN-TG",
+      "IN-JK",
+      "IN-OR",
+      "IN-PB",
+      "IN-AS",
+      "IN-KL",
+      "IN-UT",
+      "IN-JH",
+      "IN-CT",
+      "IN-TR",
+      "IN-HP",
+      "IN-CH",
+      "IN-GA",
+      "IN-MN",
+      "IN-PY",
+      "IN-NL",
+      "IN-LA",
+      "IN-AR",
+      "IN-MZ",
+      "IN-AN",
+      "IN-ML",
+      "IN-DN",
+      "IN-SK",
+      "IN-LD"
+    ]
+
+    $.each(data.statewise, function (id, obj) {
+      confirm.push(obj.confirmed);
+      active.push(obj.active);
+      deaths.push(obj.deaths);
+      recovered.push(obj.recovered);
+    });
+    confirm.shift();
+    active.shift();
+    deaths.shift();
+    recovered.shift();
+
+    $.each(confirm, function (id, obj) {
+      conf[code[id]] = confirm[id]
+      deat[code[id]] = deaths[id]
+      rec[code[id]] = recovered[id]
+      act[code[id]] = active[id]
+    });
+
+  });
+
+  $(function () {
+    var palette = ['#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a'];
+    generateColors = function () {
+      var colors = {},
+        key;
+
+      for (key in map.regions) {
+        colors[key] = palette[Math.floor(Math.random() * palette.length)];
+      }
+      return colors;
+    },
+      map;
+
+    map = new jvm.Map({
+      map: 'in_merc',
+      backgroundColor: 'transparent',
+      container: $('#map'),
+      series: {
+        regions: [{
+          attribute: 'fill'
+        }]
+      },
+
+
+      onRegionTipShow: function (e, el, code) {
+        el.html('<div style="background-color:#161e2c;"><span style="font-size:20px">' + el.html() + '</span>' + '<span style="color: rgb(68, 155, 226);"><br>Confirm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; ' + conf[code] + '</span><span style="color: rgb(248, 245, 64);"><br>Active	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ' +
+          act[code] + '</span><span style="color: rgb(101, 221, 155);"><br>Recovered</span>&nbsp;&nbsp;:&nbsp;<span style="color: rgb(101, 221, 155);">' + rec[code] + '</span><span style="color: #f65164;"><br>Death&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;' + deat[code] + '</span></div>').css("border:none;");
+
+      }
+    });
+    map.series.regions[0].setValues(generateColors());
+
+  })
+
+
+  // $("#map").vectorMap({
+  //   map: "in_merc",
+  //   backgroundColor: 'transparent',
+  //   series: {
+  //     regions: [{
+  //       values: conf,
+  //       scale: ['#C8EEFF', '#0071A4'],
+  //       attribute: 'fill'
+  //     }]
+  //   },
+  //   onRegionTipShow: function (e, el, code) {
+  //     el.html(el.html() + '<br>Confirm : ' + conf[code]);
+  //     el.html(el.html() + '<br>ACTIVE  : ' + act[code]);
+  //     el.html(el.html() + '<br>CONFIRM : ' + rec[code]);
+  //     el.html(el.html() + '<br>DEATHS  : ' + deat[code]);
+  //   }
+
+  // });
+
+
+</script>
+
+{% endblock %}
