@@ -13,7 +13,7 @@ $(document).ready(function () {
     $.each(data.statewise, function (id, obj) {
       var reqstate = allStates[i];
 
-      if (count > 0 && (unassgn > 8 || unassgn < 8)) {
+      if (count > 0 && (count!=9)) {
         var eachrow =
           "<tr>" +
           '<td><a href=" ' +
