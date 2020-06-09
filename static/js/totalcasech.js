@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var url = "http://api.covid19india.org/data.json";
+  var url = "https://api.covid19india.org/data.json";
 
   $.getJSON(url, function (data) {
     //TOTAL CASES
