@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var url = "http://api.covid19india.org/data.json";
+  var url = "https://api.covid19india.org/data.json";
   var colors = [
     "#003f5c",
     "#58508d",
