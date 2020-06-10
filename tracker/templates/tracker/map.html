@@ -1,7 +1,7 @@
 {% extends 'tracker/main.html'%} {% include 'tracker/navbar.html' %}
 {% block content %}
 <div style="margin-top: 100px;"></div>
-<div class="container-fluid content p-0" style="margin-top: 60px;">
+<div id ="map-div" class="container-fluid content p-0 " >
   <div id="map" class="jvmap-smart" style="height: calc(100vh - 60px);"></div>
 </div>
 
@@ -19,7 +19,7 @@
   var code=[]
   $.getJSON(url, function (data) {
 
-    console.log(data)
+  
     $.each(data.statewise, function (id, obj) {
       confirm.push(obj.confirmed);
       active.push(obj.active);
@@ -34,7 +34,7 @@
     active.shift();
     deaths.shift();
     recovered.shift();
-    console.log(code)
+
 
     $.each(confirm, function (id, obj) {
       conf[code[id]] = confirm[id]
@@ -46,7 +46,7 @@
   });
 
   $(function () {
-    var palette = ['#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a'];
+    var palette = ['#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a','#9a4161','#c2618a'];
     generateColors = function () {
       var colors = {},
         key;
