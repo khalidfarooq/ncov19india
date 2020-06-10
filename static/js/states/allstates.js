@@ -43,7 +43,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -52,7 +52,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#aptbody").append(eachrow);
@@ -112,7 +112,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -121,7 +121,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#astbody").append(eachrow);
@@ -180,7 +180,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -189,7 +189,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#chtbody").append(eachrow);
@@ -248,7 +248,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -257,7 +257,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#dltbody").append(eachrow);
@@ -316,7 +316,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -325,7 +325,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#gatbody").append(eachrow);
@@ -384,7 +384,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -393,7 +393,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#hptbody").append(eachrow);
@@ -454,7 +454,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -463,7 +463,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#jhtbody").append(eachrow);
@@ -522,7 +522,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -531,7 +531,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#katbody").append(eachrow);
@@ -590,7 +590,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -599,7 +599,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
         $("#latbody").append(eachrow);
@@ -659,7 +659,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -668,7 +668,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#mhtbody").append(eachrow);
@@ -727,7 +727,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -736,7 +736,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#mntbody").append(eachrow);
@@ -795,7 +795,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -804,7 +804,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#mztbody").append(eachrow);
@@ -864,7 +864,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -873,7 +873,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#ortbody").append(eachrow);
@@ -932,7 +932,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -941,7 +941,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#pytbody").append(eachrow);
@@ -1000,7 +1000,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1009,7 +1009,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#sktbody").append(eachrow);
@@ -1068,7 +1068,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1077,7 +1077,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
         $("#tntbody").append(eachrow);
@@ -1138,7 +1138,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1147,7 +1147,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#uptbody").append(eachrow);
@@ -1207,7 +1207,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1216,7 +1216,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#wbtbody").append(eachrow);
@@ -1276,7 +1276,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1285,7 +1285,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
         $("#gjtbody").append(eachrow);
@@ -1339,7 +1339,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1348,7 +1348,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#rjtbody").append(eachrow);
@@ -1407,7 +1407,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1416,7 +1416,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#mptbody").append(eachrow);
@@ -1475,7 +1475,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1484,7 +1484,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#brtbody").append(eachrow);
@@ -1545,7 +1545,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1554,7 +1554,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#hrtbody").append(eachrow);
@@ -1615,7 +1615,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1624,7 +1624,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#jktbody").append(eachrow);
@@ -1685,7 +1685,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1694,7 +1694,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
         $("#tgtbody").append(eachrow);
@@ -1755,7 +1755,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1764,7 +1764,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#pbtbody").append(eachrow);
@@ -1825,7 +1825,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1834,7 +1834,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#kltbody").append(eachrow);
@@ -1895,7 +1895,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1904,7 +1904,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#uttbody").append(eachrow);
@@ -1965,7 +1965,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -1974,7 +1974,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#cttbody").append(eachrow);
@@ -2033,7 +2033,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -2042,7 +2042,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#trtbody").append(eachrow);
@@ -2101,7 +2101,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -2110,7 +2110,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#nltbody").append(eachrow);
@@ -2169,7 +2169,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -2178,7 +2178,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#artbody").append(eachrow);
@@ -2237,7 +2237,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -2246,7 +2246,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#mltbody").append(eachrow);
@@ -2306,7 +2306,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -2315,7 +2315,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#antbody").append(eachrow);
@@ -2374,7 +2374,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -2383,7 +2383,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#dntbody").append(eachrow);
@@ -2442,7 +2442,7 @@ $(document).ready(function () {
         obj.district +
         "</a></td>" +
         "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.confirmed +
+        obj.active +
         "</td>" +
         "<td style = \"color: rgb(101, 221, 155);\">" +
         obj.recovered +
@@ -2451,7 +2451,7 @@ $(document).ready(function () {
         obj.deceased +
         "</td>" +
         "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.active +
+        obj.confirmed +
         "</td>" +
         "</tr>";
       $("#ldtbody").append(eachrow);
