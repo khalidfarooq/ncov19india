@@ -13,6 +13,15 @@
   <link rel="stylesheet" href="{% static 'css/jquery-jvectormap-2.0.5.css'%}">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="{% static 'js/mapassets/jquery-jvectormap-2.0.5.min.js'%}"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169212924-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-169212924-1');
+  </script>
 
   <!--- World SVG Path Info file in jVectorMap supported format-->
   <script src="{% static 'js/mapassets/jquery-jvectormap-in-merc.js'%}"></script>
