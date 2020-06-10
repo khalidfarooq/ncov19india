@@ -58,6 +58,7 @@ div::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: flex-start;
 }
+
 /*-------x---------Glocbal Declr--------x---------*/
 
 /*-----------------Navbar--------------------------*/
@@ -124,6 +125,9 @@ thead {
 
 
 @media screen and (min-width: 992px) {
+  #map-div{
+  margin-top: 150px;
+}
   #wholetable{
     width: 113%;
   }
