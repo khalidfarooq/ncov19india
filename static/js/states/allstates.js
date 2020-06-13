@@ -3,13 +3,41 @@ function numberWithCommas(number) {
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return parts.join(".");
 }
+
+// $(document).ready(function () {
+//   var url = "https://api.covid19india.org/v2/state_district_wise.json";
+//   var statesorder = []
+//   $.getJSON(url, function (data) {
+//     $.each(data.statewise, function (id, obj) {
+//       statesorder.push(obj.statecode)
+
+//     });
+//   });
+//   console.log(statesorder)
+// });
+
+
+var url = "https://api.covid19india.org/data.json";
+var statecodes = [];
+$.getJSON(url, function (data) {
+
+  $.each(data.statewise, function (id, obj) {
+    var a = (obj.statecode).toLowerCase()
+    statecodes.push(a)
+
+  });
+});
+
+
+
 $(document).ready(function () {
   var url = "https://api.covid19india.org/data.json";
 
+
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
+    var a = jQuery.inArray("ap", statecodes)
 
-    const a = 11;
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -78,7 +106,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 18;
+    var a = jQuery.inArray("as", statecodes)
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -107,7 +135,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -146,7 +174,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 25;
+    var a = jQuery.inArray("ch", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -175,7 +203,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -214,7 +242,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 3;
+    var a = jQuery.inArray("dl", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -282,7 +310,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 28;
+    var a = jQuery.inArray("ga", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -311,7 +339,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -350,7 +378,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 23;
+    var a = jQuery.inArray("hp", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -420,7 +448,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 21;
+    var a = jQuery.inArray("jh", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -517,7 +545,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -556,7 +584,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 27;
+    var a = jQuery.inArray("la", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -585,23 +613,23 @@ $(document).ready(function () {
 
       if (count < 2) {
         var eachrow =
-         "<tr>" +
-        "<td>" +
-        obj.district +
-        "</a></td>" +
-        "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.active +
-        "</td>" +
-        "<td style = \"color: rgb(101, 221, 155);\">" +
-        obj.recovered +
-        "</td>" +
-        "<td style = \"color:#f65164;\">" +
-        obj.deceased +
-        "</td>" +
-        "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.confirmed +
-        "</td>" +
-        "</tr>";
+          "<tr>" +
+          "<td>" +
+          obj.district +
+          "</a></td>" +
+          "<td style = \"color:rgb(248, 245, 64);\">" +
+          obj.active +
+          "</td>" +
+          "<td style = \"color: rgb(101, 221, 155);\">" +
+          obj.recovered +
+          "</td>" +
+          "<td style = \"color:#f65164;\">" +
+          obj.deceased +
+          "</td>" +
+          "<td style = \"color:rgb(68, 155, 226);\">" +
+          obj.confirmed +
+          "</td>" +
+          "</tr>";
         $("#latbody").append(eachrow);
 
         count++;
@@ -693,7 +721,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 26;
+    var a = jQuery.inArray("mn", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -761,7 +789,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 35;
+    var a = jQuery.inArray("mz", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -830,7 +858,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 17;
+    var a = jQuery.inArray("or", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -898,7 +926,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 29;
+    var a = jQuery.inArray("py", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -927,7 +955,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -966,7 +994,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 36;
+    var a = jQuery.inArray("sk", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -995,7 +1023,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -1063,23 +1091,23 @@ $(document).ready(function () {
 
       if (count > 2) {
         var eachrow =
-         "<tr>" +
-        "<td>" +
-        obj.district +
-        "</a></td>" +
-        "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.active +
-        "</td>" +
-        "<td style = \"color: rgb(101, 221, 155);\">" +
-        obj.recovered +
-        "</td>" +
-        "<td style = \"color:#f65164;\">" +
-        obj.deceased +
-        "</td>" +
-        "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.confirmed +
-        "</td>" +
-        "</tr>";
+          "<tr>" +
+          "<td>" +
+          obj.district +
+          "</a></td>" +
+          "<td style = \"color:rgb(248, 245, 64);\">" +
+          obj.active +
+          "</td>" +
+          "<td style = \"color: rgb(101, 221, 155);\">" +
+          obj.recovered +
+          "</td>" +
+          "<td style = \"color:#f65164;\">" +
+          obj.deceased +
+          "</td>" +
+          "<td style = \"color:rgb(68, 155, 226);\">" +
+          obj.confirmed +
+          "</td>" +
+          "</tr>";
         $("#tntbody").append(eachrow);
       }
       count++;
@@ -1104,7 +1132,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 7;
+    var a = jQuery.inArray("up", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1133,7 +1161,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -1173,7 +1201,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 8;
+    var a = jQuery.inArray("wb", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1202,7 +1230,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -1242,7 +1270,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 4;
+    var a = jQuery.inArray("gj", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1271,23 +1299,23 @@ $(document).ready(function () {
 
       if (count > 1) {
         var eachrow =
-         "<tr>" +
-        "<td>" +
-        obj.district +
-        "</a></td>" +
-        "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.active +
-        "</td>" +
-        "<td style = \"color: rgb(101, 221, 155);\">" +
-        obj.recovered +
-        "</td>" +
-        "<td style = \"color:#f65164;\">" +
-        obj.deceased +
-        "</td>" +
-        "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.confirmed +
-        "</td>" +
-        "</tr>";
+          "<tr>" +
+          "<td>" +
+          obj.district +
+          "</a></td>" +
+          "<td style = \"color:rgb(248, 245, 64);\">" +
+          obj.active +
+          "</td>" +
+          "<td style = \"color: rgb(101, 221, 155);\">" +
+          obj.recovered +
+          "</td>" +
+          "<td style = \"color:#f65164;\">" +
+          obj.deceased +
+          "</td>" +
+          "<td style = \"color:rgb(68, 155, 226);\">" +
+          obj.confirmed +
+          "</td>" +
+          "</tr>";
         $("#gjtbody").append(eachrow);
       }
       count++;
@@ -1310,7 +1338,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 5;
+    var a = jQuery.inArray("rj", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1334,7 +1362,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     $.each(data[29].districtData, function (id, obj) {
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -1372,7 +1400,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 6;
+    var a = jQuery.inArray("mp", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1402,7 +1430,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -1441,7 +1469,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 10;
+    var a = jQuery.inArray("br", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1470,7 +1498,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -1511,7 +1539,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 15;
+    var a = jQuery.inArray("hr", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1540,7 +1568,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -1581,7 +1609,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 14;
+    var a = jQuery.inArray("jk", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1610,7 +1638,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -1651,7 +1679,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 13;
+    var a = jQuery.inArray("tg", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1680,23 +1708,23 @@ $(document).ready(function () {
 
       if (count > 1) {
         var eachrow =
-         "<tr>" +
-        "<td>" +
-        obj.district +
-        "</a></td>" +
-        "<td style = \"color:rgb(248, 245, 64);\">" +
-        obj.active +
-        "</td>" +
-        "<td style = \"color: rgb(101, 221, 155);\">" +
-        obj.recovered +
-        "</td>" +
-        "<td style = \"color:#f65164;\">" +
-        obj.deceased +
-        "</td>" +
-        "<td style = \"color:rgb(68, 155, 226);\">" +
-        obj.confirmed +
-        "</td>" +
-        "</tr>";
+          "<tr>" +
+          "<td>" +
+          obj.district +
+          "</a></td>" +
+          "<td style = \"color:rgb(248, 245, 64);\">" +
+          obj.active +
+          "</td>" +
+          "<td style = \"color: rgb(101, 221, 155);\">" +
+          obj.recovered +
+          "</td>" +
+          "<td style = \"color:#f65164;\">" +
+          obj.deceased +
+          "</td>" +
+          "<td style = \"color:rgb(68, 155, 226);\">" +
+          obj.confirmed +
+          "</td>" +
+          "</tr>";
         $("#tgtbody").append(eachrow);
 
       }
@@ -1721,7 +1749,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 16;
+    var a = jQuery.inArray("pb", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1791,7 +1819,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 19;
+    var a = jQuery.inArray("kl", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1861,7 +1889,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 20;
+    var a = jQuery.inArray("ut", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1931,7 +1959,7 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
 
-    const a = 22;
+    var a = jQuery.inArray("ct", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -1999,7 +2027,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 24;
+    var a = jQuery.inArray("tr", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -2028,7 +2056,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -2067,7 +2095,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 30;
+    var a = jQuery.inArray("nl", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -2096,7 +2124,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -2135,7 +2163,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 33;
+    var a = jQuery.inArray("ar", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -2164,7 +2192,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-      "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -2203,7 +2231,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 32;
+    var a = jQuery.inArray("ml", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -2232,7 +2260,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-     "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -2272,7 +2300,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 31;
+    var a = jQuery.inArray("an", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -2301,7 +2329,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-      "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -2340,7 +2368,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 34;
+    var a = jQuery.inArray("dn", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -2369,7 +2397,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-       "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
@@ -2408,7 +2436,7 @@ $(document).ready(function () {
 
   $.getJSON(url, function (data) {
     var total_active, total_recovered, total_deaths, total_confirmed;
-    const a = 37;
+    var a = jQuery.inArray("ld", statecodes);
     total_active = data.statewise[a].active;
     total_recovered = data.statewise[a].recovered;
     total_deaths = data.statewise[a].deaths;
@@ -2437,7 +2465,7 @@ $(document).ready(function () {
 
 
       var eachrow =
-      "<tr>" +
+        "<tr>" +
         "<td>" +
         obj.district +
         "</a></td>" +
