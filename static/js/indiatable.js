@@ -13,28 +13,32 @@ $(document).ready(function () {
     $.each(data.statewise, function (id, obj) {
       var reqstate = allStates[i];
 
-      if (count > 0 && (count!=9)) {
-        var eachrow =
-          "<tr>" +
-          '<td><a href=" ' +
-          reqstate +
-          '">' +
-          obj.state +
-          "</a></td>" +
-          '<td style = "color:rgb(248, 245, 64);">' +
-          obj.active +
-          "</td>" +
-          '<td style = "color: rgb(101, 221, 155);">' +
-          obj.recovered +
-          "</td>" +
-          '<td style = "color:#f65164;">' +
-          obj.deaths +
-          "</td>" +
-          '<td style = "color:rgb(68, 155, 226);">' +
-          obj.confirmed +
-          "</td>" +
-          "</tr>";
-        $("#indiatbody").append(eachrow);
+      if (count > 0 && (count != 9)) {
+        if (reqstate != 'UN') {
+          var eachrow =
+            "<tr>" +
+            '<td><a href="' +
+            reqstate +
+            '" id="' +
+            reqstate +
+            '">' +
+            obj.state +
+            "</a></td>" +
+            '<td style = "color:rgb(248, 245, 64);">' +
+            obj.active +
+            "</td>" +
+            '<td style = "color: rgb(101, 221, 155);">' +
+            obj.recovered +
+            "</td>" +
+            '<td style = "color:#f65164;">' +
+            obj.deaths +
+            "</td>" +
+            '<td style = "color:rgb(68, 155, 226);">' +
+            obj.confirmed +
+            "</td>" +
+            "</tr>";
+          $("#indiatbody").append(eachrow);
+        }
       }
       i++;
       count++;
