@@ -7,7 +7,7 @@ $(document).ready(function () {
     daily_confirmed = [];
     daily_recovered = [];
     daily_deceased = [];
-    $.each(data.cases_time_series.slice(100), function (id, obj) {
+    $.each(data.cases_time_series.slice(200), function (id, obj) {
       dates.push(obj.date);
       daily_confirmed.push(obj.dailyconfirmed);
       daily_recovered.push(obj.dailyrecovered);
